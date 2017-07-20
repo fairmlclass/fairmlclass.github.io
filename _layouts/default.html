@@ -3,7 +3,7 @@
 
   {% include head.html %}
   
-    <script type="text/x-mathjax-config">
+    <!-- script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         extensions: ["tex2jax.js"],
         jax: ["input/TeX", "output/HTML-CSS"],
@@ -17,23 +17,16 @@
       });
     </script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js">
-    </script>
+    </script -->
 
 
   <body>
 
-    <!-- {% include header.html %} -->
-
     <div class="page-content">
       <div class="wrapper">
         {{ content }}
-
-    {% include comments.html %}
       </div>
     </div>
-
-
-    {% include footer.html %}
 
   </body>
 

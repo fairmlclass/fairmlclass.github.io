@@ -43,8 +43,6 @@ Aylin Caliskan, Joanna J. Bryson, Arvind Narayanan
 
 ## The quest for statistical fairness measures
 
-### Prelude
-
 [Sex Bias in Graduate Admissions: Data from Berkeley](http://science.sciencemag.org/content/187/4175/398)  
 P. J. Bickel, E. A. Hammel, J. W. O'Connell. 1975.
 
@@ -55,6 +53,9 @@ Pearl (Chapter 6)
 Blog post: [Approaching fairness in machine learning](http://blog.mrtz.org/2016/09/06/approaching-fairness.html)  
 Moritz Hardt. 2016.
 
+[Equality of Opportunity in Supervised
+Learning](https://arxiv.org/abs/1610.02413)  
+Moritz Hardt, Eric Price, Nathan Srebro. 2016.
 
 ### COMPAS and criminal justice
 
@@ -101,7 +102,7 @@ Hardt. 2016.
 
 [Equality of Opportunity in Supervised
 Learning](https://arxiv.org/abs/1610.02413)  
-Moritz Hardt, Eric Price, Nathan Srebro
+Moritz Hardt, Eric Price, Nathan Srebro. 2016.
 
 ## Beyond observational measures
 

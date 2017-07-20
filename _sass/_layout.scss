@@ -210,7 +210,7 @@
     }
 }
 
-.post-content {
+.post-content, .page-content {
     font-size: $content-font-size;
     margin-bottom: $spacing-unit;
 
@@ -242,7 +242,6 @@
     }
 
     p {
-        text-align: justify;
     }
 
     strong {
