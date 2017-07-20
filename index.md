@@ -34,6 +34,9 @@ Last updated: July 19, 2017
 [Big Data: A Report on Algorithmic Systems, Opportunity, and Civil Rights](https://obamawhitehouse.archives.gov/sites/default/files/microsites/ostp/2016_0504_data_discrimination.pdf)  
 The White House. 2016.
 
+[Big Data’s Disparate Impact](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899)  
+Solon Barocas, Andrew Selbst. 2014.
+
 Blog post: [How big data is unfair](https://medium.com/@mrtz/how-big-data-is-unfair-9aa544d739de)  
 Moritz Hardt. 2014
 
