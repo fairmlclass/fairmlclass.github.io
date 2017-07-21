@@ -27,7 +27,7 @@ mindful of its social and legal context.
 
 # Outline (preliminary)
 
-Last updated: July 19, 2017
+Last updated: July 20, 2017
 
 ## Sources of unfairness
 
@@ -101,6 +101,10 @@ Alexandra Chouldechova. 2016.
 An interactive visualization by Martin Wattenberg, Fernanda Viégas, and Moritz
 Hardt. 2016.
 
+[Algorithmic decision making and the cost of
+fairness](https://arxiv.org/abs/1701.08230)  
+Sam Corbett-Davies, Emma Pierson, Avi Feller, Sharad Goel, Aziz Huq. 2017.
+
 ### Inherent limitations of observational measures
 
 [Equality of Opportunity in Supervised
@@ -148,6 +152,14 @@ Andrew Gelman. 2015.
 [Statistics and the Theory of
 Measurement](http://www.lps.uci.edu/~johnsonk/CLASSES/MeasurementTheory/Hand1996.StatisticsAndTheTheoryOfMeasurement.pdf)  
 David J. Hand. 1996.
+
+
+## Unsupervised learning
+
+[Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word
+Embeddings](https://arxiv.org/abs/1607.06520)  
+Tolga Bolukbasi, Kai-Wei Chang, James Zou, Venkatesh Saligrama, Adam Kalai. 2016.
+
 
 ## Legal and policy perspectives
 
