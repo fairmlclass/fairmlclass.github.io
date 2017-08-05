@@ -20,16 +20,27 @@ This is an intensive graduate seminar on fairness in machine learning. The focus
 is on understanding and mitigating *discrimination based on sensitive
 characteristics*, such as, gender, race, religion, physical ability, and sexual
 orientation. Recent years have shown that unintended discrimination arises
-naturally and frequently in the use of machine learning.
+naturally and frequently in the use of machine learning and algorithmic 
+decision making.
 
 We will work systematically towards a technical understanding of this problem
-mindful of its social and legal context.
+mindful of its social and legal context. 
 
 # Outline (preliminary)
 
-Last updated: July 20, 2017
+Last updated: August 4, 2017
 
+* [Sources of unfairness](#sources)
+* [Statistical measures of discrimination](#statistical)
+* [Trade-offs and impossibility results](#tradeoffs)
+* [Beyond observational measures](#beyond)
+* [Measurement, sampling](#measurement)
+* [Policy perspectives](#policy)
+
+
+<a name="sources"></a>
 ## Sources of unfairness
+
 
 [Big Data: A Report on Algorithmic Systems, Opportunity, and Civil Rights](https://obamawhitehouse.archives.gov/sites/default/files/microsites/ostp/2016_0504_data_discrimination.pdf)  
 The White House. 2016.
@@ -44,7 +55,8 @@ Moritz Hardt. 2014
 biases](http://science.sciencemag.org/content/356/6334/183)  
 Aylin Caliskan, Joanna J. Bryson, Arvind Narayanan
 
-## The quest for statistical fairness measures
+<a name="statistical"></a>
+## Statistical measures of discrimination
 
 [Sex Bias in Graduate Admissions: Data from Berkeley](http://science.sciencemag.org/content/187/4175/398)  
 P. J. Bickel, E. A. Hammel, J. W. O'Connell. 1975.
@@ -82,6 +94,7 @@ Angèle Christin, Alex Rosenblat, and danah boyd. 2015.
 [Discussion
 paper](http://www.datacivilrights.org/pubs/2015-1027/WDN-Courts_and_Predictive_Algorithms.pdf)
 
+<a name="tradeoffs"></a>
 ## Trade-offs and impossibility results
 
 ### Classification, Calibration, Precision, Recall
@@ -111,6 +124,7 @@ Sam Corbett-Davies, Emma Pierson, Avi Feller, Sharad Goel, Aziz Huq. 2017.
 Learning](https://arxiv.org/abs/1610.02413)  
 Moritz Hardt, Eric Price, Nathan Srebro. 2016.
 
+<a name="beyond"></a>
 ## Beyond observational measures
 
 ### Causal reasoning
@@ -143,7 +157,9 @@ Sorelle A. Friedler, Carlos Scheidegger, Suresh Venkatasubramanian. 2016.
 used](https://gking.harvard.edu/files/gking/files/psnot.pdf)  
 Gary King, Richard Nielson. 2016.
 
-## Measurement
+
+<a name="measurement"></a>
+## Measurement, sampling
 
 Blog post: [What's the most important thing in Statistics that's not in the
 textbooks](http://andrewgelman.com/2015/04/28/whats-important-thing-statistics-thats-not-textbooks/)  
@@ -152,6 +168,17 @@ Andrew Gelman. 2015.
 [Statistics and the Theory of
 Measurement](http://www.lps.uci.edu/~johnsonk/CLASSES/MeasurementTheory/Hand1996.StatisticsAndTheTheoryOfMeasurement.pdf)  
 David J. Hand. 1996.
+
+[Measurement Theory and Practice: The World Through
+Quantification](http://www.wiley.com/WileyCDA/WileyTitle/productCd-0470685670.html)  
+David J. Hand. 2010
+
+[Survey Methodology, 2nd Edition](http://www.wiley.com/WileyCDA/WileyTitle/productCd-0470465468.html)  
+Robert M. Groves, Floyd J. Fowler, Jr., Mick P. Couper, James M. Lepkowski,
+Eleanor Singer, Roger Tourangeau. 2009
+
+[Sampling: Design and Analysis](http://www.cengage.com/c/sampling-design-and-analysis-2e-lohr)  
+Sharon L. Lohr
 
 
 ## Unsupervised learning
@@ -170,7 +197,6 @@ Solon Barocas, Andrew Selbst. 2014.
 [It’s Not Privacy, and It’s Not
 Fair](https://www.stanfordlawreview.org/online/privacy-and-big-data-its-not-privacy-and-its-not-fair)  
 Cynthia Dwork, Deirdre K. Mulligan. 2013.
-
 
 [The Trouble with Algorithmic
 Decisions](http://journals.sagepub.com/doi/abs/10.1177/0162243915605575)  
