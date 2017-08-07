@@ -178,7 +178,8 @@ Robert M. Groves, Floyd J. Fowler, Jr., Mick P. Couper, James M. Lepkowski,
 Eleanor Singer, Roger Tourangeau. 2009
 
 [Sampling: Design and Analysis](http://www.cengage.com/c/sampling-design-and-analysis-2e-lohr)  
-Sharon L. Lohr
+Sharon L. Lohr  
+Chapter 7.6, 8, 12, 14, 15
 
 
 ## Unsupervised learning
@@ -188,6 +189,7 @@ Embeddings](https://arxiv.org/abs/1607.06520)
 Tolga Bolukbasi, Kai-Wei Chang, James Zou, Venkatesh Saligrama, Adam Kalai. 2016.
 
 
+<a name="policy"></a>
 ## Legal and policy perspectives
 
 [Big Data’s Disparate
