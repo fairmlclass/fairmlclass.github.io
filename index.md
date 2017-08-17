@@ -14,6 +14,14 @@ Grading policy: 50% in class participation, 50% project
 Undergraduate enrollment policy: With permission from the instructor only. Email
 transcript, and description of any relevant prior projects or research experience.
 
+Students will receive access to a slack channel for class related discussions.
+
+## Updates
+
+* *8/15/2017* --- The class has reached its enrollment cap. Additional
+ participants are waitlisted for now. If you would like to participate and
+ couldn't enroll, please come to the first day of class and talk to me.
+
 ## Summary
 
 This is an intensive graduate seminar on fairness in machine learning. The focus
@@ -28,7 +36,7 @@ mindful of its social and legal context.
 
 # Outline (preliminary)
 
-Last updated: August 4, 2017
+Last updated: August 17, 2017
 
 * [Sources of unfairness](#sources)
 * [Statistical measures of discrimination](#statistical)
@@ -161,9 +169,15 @@ Gary King, Richard Nielson. 2016.
 <a name="measurement"></a>
 ## Measurement, sampling
 
+[Raw Data is an Oxymoron](https://mitpress.mit.edu/books/raw-data-oxymoron)  
+Edited by Lisa Gitelman. 2013.
+
 Blog post: [What's the most important thing in Statistics that's not in the
 textbooks](http://andrewgelman.com/2015/04/28/whats-important-thing-statistics-thats-not-textbooks/)  
 Andrew Gelman. 2015.
+
+[Deconstructing Statistical Questions](http://statlab.bio5.org/sites/default/files/fall2014/hand-deconstructin.pdf)  
+David J. Hand. 1994.
 
 [Statistics and the Theory of
 Measurement](http://www.lps.uci.edu/~johnsonk/CLASSES/MeasurementTheory/Hand1996.StatisticsAndTheTheoryOfMeasurement.pdf)  
@@ -206,6 +220,13 @@ Tal Zarsky. 2016.
 
 ## Background reading
 
+[A Theory of Justice](http://www.hup.harvard.edu/catalog.php?isbn=9780674000780&content=reviews)  
+John Rawls
+
+[Equality of
+Opportunity](http://www.hup.harvard.edu/catalog.php?isbn=9780674004221)  
+John E. Roemer
+
 [Causality](http://bayes.cs.ucla.edu/BOOK-2K/)  
 Judea Pearl
 
@@ -214,7 +235,7 @@ Inference](http://www.cambridge.org/catalogue/catalogue.asp?isbn=9781107065079)
 Morgan and Winship
 
 [Equity](http://press.princeton.edu/titles/5379.html)  
-Peyton Young. 1995.
+Peyton Young
 
 [Weapons of Math Destruction](https://weaponsofmathdestructionbook.com/)  
 Cathy O’Neil. 
