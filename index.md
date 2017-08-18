@@ -214,6 +214,9 @@ Chapter 7.6, 8, 12, 14, 15
 Embeddings](https://arxiv.org/abs/1607.06520)  
 Tolga Bolukbasi, Kai-Wei Chang, James Zou, Venkatesh Saligrama, Adam Kalai. 2016.
 
+[Men Also Like Shopping: Reducing Gender Bias Amplification using Corpus-level
+Constraints](https://arxiv.org/abs/1707.09457)  
+Jieyu Zhao, Tianlu Wang, Mark Yatskar, Vicente Ordonez, Kai-Wei Chang. 2017.
 
 <a name="policy"></a>
 ## Legal and policy perspectives
