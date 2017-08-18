@@ -73,12 +73,16 @@ Simpson’s paradox
 Pearl (Chapter 6)  
 [Tech report](http://bayes.cs.ucla.edu/R264.pdf)
 
-Blog post: [Approaching fairness in machine learning](http://blog.mrtz.org/2016/09/06/approaching-fairness.html)  
-Moritz Hardt. 2016.
+[Certifying and removing disparate impact](https://arxiv.org/abs/1412.3756)  
+Michael Feldman, Sorelle Friedler, John Moeller, Carlos Scheidegger, Suresh
+Venkatasubramanian
 
 [Equality of Opportunity in Supervised
 Learning](https://arxiv.org/abs/1610.02413)  
 Moritz Hardt, Eric Price, Nathan Srebro. 2016.
+
+Blog post: [Approaching fairness in machine learning](http://blog.mrtz.org/2016/09/06/approaching-fairness.html)  
+Moritz Hardt. 2016.
 
 ### COMPAS and criminal justice
 
