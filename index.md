@@ -53,6 +53,10 @@ Last updated: August 17, 2017
 [Big Data: A Report on Algorithmic Systems, Opportunity, and Civil Rights](https://obamawhitehouse.archives.gov/sites/default/files/microsites/ostp/2016_0504_data_discrimination.pdf)  
 The White House. 2016.
 
+[The hidden biases in Big
+Data](https://hbr.org/2013/04/the-hidden-biases-in-big-data)  
+Kate Crawford. 2013.
+
 [Big Data’s Disparate Impact](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899)  
 Solon Barocas, Andrew Selbst. 2014.
 
