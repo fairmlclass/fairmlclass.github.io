@@ -53,6 +53,10 @@ Last updated: August 17, 2017
 [Big Data: A Report on Algorithmic Systems, Opportunity, and Civil Rights](https://obamawhitehouse.archives.gov/sites/default/files/microsites/ostp/2016_0504_data_discrimination.pdf)  
 The White House. 2016.
 
+[Bias in computer systems](http://dl.acm.org/citation.cfm?id=230561)  
+Batya Friedman, Helen Nissenbaum. 1996 (!)
+
+
 [The Hidden Biases in Big
 Data](https://hbr.org/2013/04/the-hidden-biases-in-big-data)  
 Kate Crawford. 2013.
