@@ -43,7 +43,7 @@ Last updated: August 17, 2017
 * [Trade-offs and impossibility results](#tradeoffs)
 * [Beyond observational measures](#beyond)
 * [Measurement, sampling](#measurement)
-* [Policy perspectives](#policy)
+* [Legal and policy perspectives](#policy)
 
 
 <a name="sources"></a>
@@ -113,6 +113,10 @@ Algorithms](http://www.datacivilrights.org/pubs/2015-1027/Courts_and_Predictive_
 Angèle Christin, Alex Rosenblat, and danah boyd. 2015.  
 [Discussion
 paper](http://www.datacivilrights.org/pubs/2015-1027/WDN-Courts_and_Predictive_Algorithms.pdf)
+
+[Limitations of mitigating judicial bias with machine
+learning](https://www.nature.com/articles/s41562-017-0141)  
+Kristian Lum. 2017.
 
 <a name="tradeoffs"></a>
 ## Trade-offs and impossibility results
@@ -232,6 +236,11 @@ Cynthia Dwork, Deirdre K. Mulligan. 2013.
 [The Trouble with Algorithmic
 Decisions](http://journals.sagepub.com/doi/abs/10.1177/0162243915605575)  
 Tal Zarsky. 2016.
+
+[How Copyright Law Can Fix Artificial Intelligence's Implicit Bias
+Problem](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3024938)  
+Amanda Levendowski. 2017.
+
 
 ## Background reading
 
