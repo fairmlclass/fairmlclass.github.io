@@ -1,0 +1,72 @@
+     <svg xmlns="http://www.w3.org/2000/svg" width="300" height="600"
+viewBox="0 0 200 400">
+        <defs>
+          <marker id="arrowhead" markerWidth="7" markerHeight="5"
+          refX="0" refY="2.5" orient="auto">
+            <polygon points="0 0, 7 2.5, 0 5" />
+          </marker>
+        </defs>
+      
+        <!-- Line from A to Y -->
+        <line class="fragment" data-fragment-index="0"
+         x1="30" y1="30" x2="70" y2="30" stroke="#000"
+         stroke-width="2" marker-end="url(#arrowhead)" />
+        <!-- Line from A to L -->
+        <line class="fragment" data-fragment-index="1"
+         x1="30" y1="30" x2="30" y2="70" stroke="#000"
+         stroke-width="2" marker-end="url(#arrowhead)" />
+        <!-- Line from Y to M -->
+        <line class="fragment" data-fragment-index="2"
+         x1="110" y1="30" x2="110" y2="70" stroke="#000"
+         stroke-width="2" marker-end="url(#arrowhead)" />
+        <!-- Line from L to R* -->
+        <line class="fragment" data-fragment-index="3"
+         x1="30" y1="110" x2="30" y2="150" stroke="#000"
+         stroke-width="2" marker-end="url(#arrowhead)" />
+        <!-- Line from M to R* -->
+        <line class="fragment" data-fragment-index="3"
+         x1="110" y1="110" x2="60" y2="165" stroke="#000"
+         stroke-width="2" marker-end="url(#arrowhead)" />
+        <!-- Line from M to R -->
+        <line class="fragment" data-fragment-index="4"
+         x1="110" y1="110" x2="110" y2="150" stroke="#000"
+         stroke-width="2" marker-end="url(#arrowhead)" />
+      
+        <!-- node A -->
+        <g class="fragment" data-fragment-index="0" 
+         transform="translate(30, 30)">
+          <circle r="25" stroke="black" stroke-width="2" fill="white" />
+          <text style="fill:#C4820E;" text-anchor="middle" y=".3em">A</text>
+        </g>
+        <!-- node Y -->
+        <g class="fragment" data-fragment-index="0" 
+         transform="translate(110, 30)">
+          <circle r="25" stroke="black" stroke-width="2" fill="white" />
+          <text style="fill:#C4820E;" text-anchor="middle" y=".3em">Y</text>
+        </g>
+        <!-- node L -->
+        <g class="fragment" data-fragment-index="1" 
+         transform="translate(30, 110)">
+          <circle r="25" stroke="black" stroke-width="2" fill="white" />
+          <text style="fill:#C4820E;" text-anchor="middle" y=".3em">L</text>
+        </g>
+        <!-- node M -->
+        <g class="fragment" data-fragment-index="2" 
+         transform="translate(110, 110)">
+         <!-- transform="translate(190, 30)"> -->
+          <circle r="25" stroke="black" stroke-width="2" fill="white" />
+          <text style="fill:#C4820E;" text-anchor="middle" y=".3em">M</text>
+        </g>
+        <!-- node R* -->
+        <g class="fragment" data-fragment-index="3" 
+         transform="translate(30, 190)">
+          <circle r="25" stroke="black" stroke-width="2" fill="white" />
+          <text style="fill:#C4820E;" text-anchor="middle" y=".3em">R*</text>
+        </g>
+        <!-- node R -->
+        <g class="fragment" data-fragment-index="4" 
+         transform="translate(110, 190)">
+          <circle r="25" stroke="black" stroke-width="2" fill="white" />
+          <text style="fill:#C4820E;" text-anchor="middle" y=".3em">R</text>
+        </g>
+      </svg>
