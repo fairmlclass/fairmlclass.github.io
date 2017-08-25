@@ -36,7 +36,7 @@ mindful of its social and legal context.
 
 # Outline (preliminary)
 
-Last updated: August 24, 2017
+Last updated: August 17, 2017
 
 * [Sources of unfairness](#sources)
 * [Statistical measures of discrimination](#statistical)
