@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>CS 294: Fairness in Machine Learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/simple.css" id="theme">
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+<section>
+  <h1 style="font-size:60pt;">CS 294: Fairness in Machine Learning</h1>
+  <h2>Day 2: Barocas and Selbst</h2>
+  <h2 style="color:#444">Instructor: Moritz Hardt</h2>
+  <img style="margin:-50px 0 0 100px;width:450px;" class="plain" src="assets/berkeleylogo.png" />
+  <p style="color:#888">August 25, 2017</p>
+  <p style="color:#888"><a
+href="http://fairmlclass.github.io/2.html">fairmlclass.github.io/2.html</a></p>
+</section>
+
+<section>
+<h2>Reminder</h2>
+<blockquote style="font-size:48pt;"> 
+Ping me for Slack access link
+</blockquote>
+<ul>
+<li class="fragment">Not relevant for grade.</li>
+<li class="fragment">But hoping for lively discussions.</li>
+</ul>
+</section>
+  
+
+<section>
+  <h2>Today</h2>
+  <p class="fragment">Work through <em>Barocas and Selbst, Big Data's Disparate
+Impact (2014)</em></p>
+  <p style="font-size:36pt;" class="fragment">Lead discussion by <em>Renata Barreto, Nitin Kohli, Maura Liévano</em>.</p>
+  <p style="font-size:42pt;" class="fragment">Thanks!</p>
+</section>
+
+<section>
+  <h2>Next class (Friday 9/1/17)</h2>
+  <p class="fragment">
+Semantics derived automatically from language corpora contain human-like
+biases<br />
+Aylin Caliskan, Joanna J. Bryson, Arvind Narayanan
+</p>
+<p class="fragment">
+Sex Bias in Graduate Admissions: Data from Berkeley<br />
+P. J. Bickel, E. A. Hammel, J. W. O’Connell. 1975.
+</p>
+  <p class="fragment">
+Bias in computer systems<br />
+Batya Friedman, Helen Nissenbaum. 1996
+  </p>
+</section>
+<section>
+  <h2>Next class (Friday 9/1/17)</h2>
+<h3> Optional: </h3>
+  <p class="fragment"> O'Neill, Weapons of Math Destruction. </p>
+  <p class="fragment"> Pasquale, The Black Box Society</p>
+  <p class="fragment"> Gitelman and Jackson, Raw Data is an Oxymoron [Introduction]</p>
+</section>
+
+
+      <!-- div slides -->
+      </div>
+    <!-- div reveal -->
+    </div>
+
+    <script src="js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      Reveal.initialize({
+        history: true,
+        transition: 'none',
+        height:900, //"100%",
+        width:1600, //"100%",
+        // Factor of the display size that should remain empty around the content
+        margin: 0.05,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+        maxScale: 1.5,
+        center: false,
+        math: {
+          // mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full'
+        },
+        dependencies: [
+          { src: 'js/classList.js' },
+          { src: 'js/math.js', async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
