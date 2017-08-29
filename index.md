@@ -142,6 +142,9 @@ Hardt. 2016.
 fairness](https://arxiv.org/abs/1701.08230)  
 Sam Corbett-Davies, Emma Pierson, Avi Feller, Sharad Goel, Aziz Huq. 2017.
 
+[The problem of Infra-marginality in Outcome Tests for Discrimination](https://5harad.com/papers/threshold-test.pdf)  
+Camelia Simoiu, Sam Corbett-Davies, Sharad Goel. 2017.
+
 ### Inherent limitations of observational measures
 
 [Equality of Opportunity in Supervised
