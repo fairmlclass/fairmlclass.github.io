@@ -34,6 +34,12 @@ decision making.
 We will work systematically towards a technical understanding of this problem
 mindful of its social and legal context. 
 
+## Lectures
+
+* [Day 1](1.html) (8/25/2017) 
+* [Day 2](2.html) (8/28/2017) 
+* [Day 3](3.html) (9/1/2017) 
+
 # Outline (preliminary)
 
 Last updated: August 17, 2017
@@ -142,7 +148,8 @@ Hardt. 2016.
 fairness](https://arxiv.org/abs/1701.08230)  
 Sam Corbett-Davies, Emma Pierson, Avi Feller, Sharad Goel, Aziz Huq. 2017.
 
-[The problem of Infra-marginality in Outcome Tests for Discrimination](https://5harad.com/papers/threshold-test.pdf)  
+[The problem of Infra-marginality in Outcome Tests for Discrimination]
+(https://5harad.com/papers/threshold-test.pdf)  
 Camelia Simoiu, Sam Corbett-Davies, Sharad Goel. 2017.
 
 ### Inherent limitations of observational measures
