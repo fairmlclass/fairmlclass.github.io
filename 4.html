@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>CS 294: Fairness in Machine Learning</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/simple.css" id="theme">
+  </head>
+
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+<section>
+  <h1 style="font-size:60pt;">CS 294: Fairness in Machine Learning</h1>
+  <h2 style="letter-spacing:-5pt;">Day 4: Intro to observational fairness criteria</h2>
+  <h2 style="color:#444">Moritz Hardt</h2>
+  <!-- h3 style="color:#aaa">UC Berkeley</h3 -->
+  <img style="margin:-50px 0 0 100px;width:450px;" class="plain" src="assets/berkeleylogo.png" />
+  <p style="color:#888">September 8, 2017</p>
+</section>
+
+<section>
+<h2>Observational fairness criteria</h2>
+<p class="fragment">Many definitions</p>
+<p class="fragment">Trade-offs</p>
+<p class="fragment">Algorithms for achieving them</p>
+<p class="fragment">Impossibility results</p>
+<div class="fragment">
+<div style="position:fixed;left:1200px;top:180px;font-size:300px;">}</div>
+<div style="position:fixed;left:1300px;top:340px;">Today!</div>
+</div>
+</section>
+
+<section>
+<h2>Typical setup</h2>
+<p class="fragment">$X$ features of an individual</p>
+<p class="fragment">$A$ sensitive attribute (race, gender, ...)</p>
+<p class="fragment">$C=C(X,A)$ classifier mapping $X$ and $A$ to some prediction</p>
+<p class="fragment">$Y$ actual outcome</p>
+<p class="fragment">Note: random variables in the same probability space</p>
+<p class="fragment"><strong>Notation:</strong> $\mathbb{P}_a\{E\}=\mathbb{P}\{E\mid A=a\}.$</p>
+</section>
+
+<section>
+<h2>All of this is a fragile abstraction</h2>
+<p class="fragment">$X$ incorporates all sorts of measurement biases</p>
+<p class="fragment">$A$ often not even known, ill-defined, misreported, inferred</p>
+<p class="fragment">$C$ often not well defined, e.g., large production ML system</p>
+<p class="fragment">$Y$ often poor proxy of actual variable of interest</p>
+</section>
+
+<section>
+<h2>Observational criteria</h2>
+<div class="fragment
+theorem"><strong>Definition.</strong>&nbsp;&nbsp;&nbsp;&nbsp; A criterion is called <em>observational</em> if
+it is a property of the joint distribution of features $X,A$, classifier $C$,
+and outcome $Y$.
+</div>
+<p>&nbsp;</p>
+<blockquote class="fragment">
+Anything you can write down as a probability statement involving $X, A, C, Y.$
+</blockquote>
+</section>
+
+<section>
+<h2>Questions we can ask</h2>
+<p class="fragment">What can we learn from observational criteria?</p>
+<p class="fragment">How can we achieve them algorithmically?</p>
+<p class="fragment">How do these criteria trade-off?</p>
+<p class="fragment">How do these criteria shape public discourses?</p>
+<div class="fragment emphbox" class="fragment">Key example: COMPAS debate on crime recidivism risk
+scores</div>
+</section>
+
+<section>
+<h2>Demographic parity</h2>
+<div class="fragment theorem"><strong>Definition.</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+Classifier $C$ satisfies <em>demographic parity</em> if $C$ is
+independent of $A$.
+</div>
+<p class="fragment">
+When $C$ is binary $0/1$-variables, this means<br />
+$\mathbb{P}_a\{C = 1\} = \mathbb{P}_b\{C = 1\}$ for all groups $a,b.$
+</p>
+<p class="fragment">
+Approximate versions:
+</p>
+<div class="fragment left">
+$$
+\frac{\mathbb{P}_a\{ C = 1 \}}
+{\mathbb{P}_b\{ C = 1 \}} \ge 1-\epsilon
+$$
+</div>
+<div class="fragment right" style="padding-top:15px;">
+$$
+\left|\mathbb{P}_a\{ C = 1 \}-
+\mathbb{P}_b\{ C = 1 \}\right|\le\epsilon
+$$
+</div>
+</p>
+</section>
+
+<section>
+<h2>Potential issues</h2>
+<div class="left">
+<h3 class="fragment">Lazyness</h3>
+<p class="fragment">
+Accept random people in group $a$ but <em>qualified people</em> in group $b.$
+</p>
+<p class="fragment">
+Can happen for lack of training data (recall sample size disparity)
+</p>
+</div>
+<div class="right">
+<h3 class="fragment">Not optimality compatible</h3>
+<p class="fragment">Rules out perfect classifier $C=Y$ when <em>base rates</em>
+are different: $\mathbb{P}_a\{C=1\}\ne\mathbb{P}_b\{C=1\}.$</p>
+</div>
+</section>
+
+<section>
+<h2>How about accuracy parity?</h2>
+<div class="fragment theorem">
+<strong>Definition.</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+Classifier $C$ satisfies <em>accuracy parity</em> if<br />
+$\mathbb{P}_a\{ C = Y \} = \mathbb{P}_b\{ C = Y \}$ for all groups $a,b$.
+</div>
+</section>
+
+
+<section>
+<h2>How about accuracy parity?</h2>
+<div style="width:48%;float:left;">
+<h3 class="fragment">The good</h3>
+<p class="fragment">
+Discourages laziness by equalizing error rates across groups.
+</p>
+<p class="fragment">
+Allows perfect predictor $C=Y.$
+</p>
+</div>
+<div style="width:48%;float:right;">
+<h3 class="fragment">The bad</h3>
+<p class="fragment">
+Error types matter!
+</p>
+<p class="fragment">
+Allows you to
+<em>make up for rejecting qualified women by accepting unqualified men.</em>
+</p>
+</div>
+</section>
+
+<section>
+<h2>True positive parity</h2>
+<p class="fragment">
+Assume $C$ and $Y$ are binary $0/1$-variables.
+</p>
+<div class="fragment theorem">
+<strong>Definition.</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+Classifier $C$ satisfies <em>true positive parity</em> if<br />
+$\mathbb{P}_a\{ C = 1 \mid Y=1\} = \mathbb{P}_b\{ C = 1\mid Y=1\}$ for all groups
+$a,b$.
+</div>
+<p class="fragment">
+Called <em>equal opportunity</em> in H-Price-Srebro (2016).
+</p>
+<p class="fragment">
+Suitable when positive outcome ($1$) is desirable.<br />
+Equivalently, primary harm is due to <em>false negatives</em>.
+</p>
+</section>
+
+<section>
+<h2>False positive parity</h2>
+<p class="fragment">
+Assume $C$ and $Y$ are binary $0/1$-variables.
+</p>
+<div class="fragment
+theorem"><strong>Definition.</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+Classifier $C$ satisfies <em>false positive parity</em> if<br />
+$\mathbb{P}_a\{ C = 1 \mid Y=0\} = \mathbb{P}_b\{ C = 1\mid Y=0\}$ for all groups
+$a,b$.
+</div>
+<p class="fragment">
+TPP+FPP together called <em>equalized odds</em> in H-Price-Srebro (2016). We'll
+also call it <em>positive rate parity</em>.
+</p>
+<p class="fragment">
+In full generality,
+random variable $R$ satisifes <em>equalized odds</em> if $R$ is conditionally
+independent of $A$ given $Y.$
+</p>
+</section>
+
+<section>
+<h2>Predictive value parity</h2>
+<p class="fragment">
+Assume $C$ and $Y$ are binary $0/1$-variables.
+</p>
+<div class="fragment theorem">
+<strong>Definition.</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+Classifier $C$ satisfies 
+<ul>
+<li class="fragment"><em>positive predictive value parity</em> if
+for all groups $a,b$:<br />
+$\mathbb{P}_a\{ Y = 1 \mid C=1\} = \mathbb{P}_b\{Y = 1\mid C=1\}$ 
+</li>
+<li class="fragment">
+<em>negative predictive value parity</em> if
+for all groups $a,b$:
+<br />
+$\mathbb{P}_a\{ Y = 1 \mid C=0\} = \mathbb{P}_b\{Y = 1\mid C=0\}$ 
+</li>
+<li class="fragment">
+<em>predictive value parity</em> if it satisfies both of the above.
+</li>
+</ul>
+</div>
+</section>
+
+<section>
+<h2>Why predictive value parity?</h2>
+<p class="fragment">
+Equalizes chance of success given acceptance.
+</p>
+
+</section>
+
+<section>
+<h2>COMPAS: An observational debate</h2>
+<p>
+<img class="plain" src="assets/machine-bias.png" />
+</p>
+</section>
+
+<section>
+<h2>COMPAS: An observational debate</h2>
+<p>Probublica's main charge was observational.</p>
+<blockquote class="fragment">Black defendants experienced higher false positive
+rate.</blockquote>
+<p class="fragment">Northpointe's main defense was observational.</p>
+<blockquote class="fragment">
+Scores satisfy precision parity.
+</blockquote>
+</section>
+
+<section>
+<h2>Trade-offs are necessary</h2>
+<div style="text-align:left" class="theorem">
+<strong>Proposition.</strong>&nbsp;&nbsp;&nbsp; Assume differing base rates 
+and an imperfect classifier $C\ne Y.$ Then, either<br />
+<ul>
+<li class="fragment">positive rate parity fails, or</li>
+<li class="fragment">predictive value parity fails.</li>
+</ul>
+</div>
+<p class="fragment">Observed in very similar form by <a
+href="https://arxiv.org/abs/1610.07524">Chouldechova (2017)</a>.</p>
+<p class="fragment">
+Similar trade-off result for score functions due to <a
+href="https://arxiv.org/abs/1609.05807">Kleinberg, Mullainathan,
+Raghavan (2016)</a></p>
+</section>
+
+<section>
+<h2>Intuition</h2>
+<table>
+<tr>
+<td>Group</td>
+<td>a</td>
+<td>b</td>
+<td></td>
+</tr>
+<tr>
+<td>Outcome</td>
+<td>
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+</td>
+<td>
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+</td>
+<td style="vertical-align:top;font-size:25px;">Unequal<br /> base rates</td>
+</tr>
+<tr>
+<td>Predictor</td>
+<td>
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero-hat.png" />
+</td>
+<td>
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero-hat.png" />
+</td>
+<td style="vertical-align:top;font-size:25px;"></td>
+</tr>
+</table>
+<p class="fragment">So far, predictor is perfect.</p>
+<p class="fragment">Let's introduce an error.</p>
+</section>
+
+
+<section>
+<h2>Intuition</h2>
+<table>
+<tr>
+<td>Group</td>
+<td>a</td>
+<td>b</td>
+<td></td>
+</tr>
+<tr>
+<td>Outcome</td>
+<td>
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+</td>
+<td>
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+</td>
+<td style="vertical-align:top;font-size:25px;">Unequal<br /> base rates</td>
+</tr>
+<tr>
+<td>Predictor</td>
+<td>
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero-hat.png" />
+</td>
+<td>
+<img style="width:30px;margin-bottom:-10px;border:5px solid #f00;" class="plain"
+src="assets/cartoon-zero-hat.png" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero-hat.png" />
+</td>
+</tr>
+</table>
+<p class="fragment">But this doesn't satisfy false positive parity!</p>
+<p class="fragment">Let's fix that!</p>
+</section>
+
+
+<section>
+<h2>Intuition</h2>
+<table>
+<tr>
+<td>Group</td>
+<td>a</td>
+<td>b</td>
+<td></td>
+</tr>
+<tr>
+<td>Outcome</td>
+<td>
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+</td>
+<td>
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+</td>
+<td style="vertical-align:top;font-size:25px;">Unequal<br /> base rates</td>
+</tr>
+<tr>
+<td>Predictor</td>
+<td>
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:30px;margin-bottom:-10px;border:5px solid #f00;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;border:5px solid #f00;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero-hat.png" />
+</td>
+<td>
+<img style="width:30px;margin-bottom:-10px;border:5px solid #f00;" class="plain"
+src="assets/cartoon-zero-hat.png" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero-hat.png" />
+</td>
+</tr>
+</table>
+<p class="fragment">Satisfies positive rate parity!</p>
+</section>
+
+<section>
+<h2>Intuition</h2>
+<table>
+<tr>
+<td>Group</td>
+<td>a</td>
+<td>b</td>
+<td></td>
+</tr>
+<tr>
+<td>Outcome</td>
+<td>
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:30px;margin-bottom:-10px;border:5px solid #00f;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:30px;margin-bottom:-10px;border:5px solid #00f;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+</td>
+<td>
+<img style="width:30px;margin-bottom:-10px;border:5px solid #00f;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+<img style="width:30px;margin-bottom:-10px;" class="plain" src="assets/cartoon-zero.jpg" />
+</td>
+<td style="vertical-align:top;font-size:25px;">Unequal<br /> base rates</td>
+</tr>
+<tr>
+<td>Predictor</td>
+<td>
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:30px;margin-bottom:-10px;border:5px solid #0f0;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;border:5px solid #0f0;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;margin-left:-5px;border:5px solid #0f0;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;margin-left:-5px;border:5px solid #0f0;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;margin-left:-5px;border:5px solid #0f0;" class="plain" src="assets/cartoon-zero-hat.png" />
+</td>
+<td>
+<img style="width:30px;margin-bottom:-10px;margin-left:-5px;border:5px solid #0f0;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:40px;margin-bottom:-10px;" class="plain" src="assets/cartoon-one-hat.png" />
+<img style="width:30px;margin-bottom:-10px;margin-left:-5px;border:5px solid #0f0;" class="plain" src="assets/cartoon-zero-hat.png" />
+<img style="width:30px;margin-bottom:-10px;margin-left:-5px;border:5px solid #0f0;" class="plain" src="assets/cartoon-zero-hat.png" />
+</td>
+</tr>
+<tr class="fragment">
+<td>
+NPV
+</td>
+<td style="text-align:center;">
+<span style="color:#00f;">2</span>/<span style="color:#0f0;">5</span>
+</td>
+<td style="text-align:center;">
+<span style="color:#00f;">1</span>/<span style="color:#0f0;">3</span>
+</td>
+</tr>
+</table>
+<p class="fragment">Does not satisfy predictive value parity!</p>
+</section>
+
+
+<section>
+<div style="text-align:left;">
+<strong>Proof.</strong>&nbsp;&nbsp;&nbsp; Assume unequal base rates $p_a, a\in\{0, 1\}$, imperfect classifier $C\ne Y$, and positive rate parity. 
+<span class="fragment">W.l.o.g., $p_0>0$ (since $p_0=p_1=0$ is
+trivial)</span><br />
+
+<span class="fragment"><strong>Show that predictive value parity fails.</strong></span>
+</div>
+<p class="fragment">Proof by googling the first <a
+href="https://en.wikipedia.org/wiki/Positive_and_negative_predictive_values">Wiki
+entry on this</a>:</p>
+
+<div class="left">
+<p>
+<span class="fragment">
+$\mathrm{PPV_a} 
+= \frac{\mathrm{TPR}p_a}{\mathrm{TPR}p_a+\mathrm{FPR}(1-p_a)}$
+</span>
+<p class="fragment">
+Hence, $\mathrm{PPV}_0=\mathrm{PPV}_1$ implies<br /> 
+either $\mathrm{TPR}=0$ or $\mathrm{FPR}=0.$<br />
+<span class="fragment">(But not both, since $C\ne Y$)</span>
+</p>
+</div>
+<div class="right">
+<p class="fragment">
+$\mathrm{NPV_a} 
+= \frac{(1-\mathrm{FPR})(1-p_a)}{(1-\mathrm{TPR})p_a+(1-\mathrm{FPR})(1-p_a)}$
+</p>
+<p class="fragment">
+In either case, $\mathrm{NPV}_0\ne \mathrm{NPV}_1.$ Hence predictive value
+parity fails.
+</p>
+<div style="margin-top:10px;text-align:right;" class="fragment">
+<svg width="60" height="60" viewBox="0 0 120 120"
+    xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="50" height="50"/>
+</svg>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Score functions</h2>
+<p class="fragment">Formally, any real-valued random variable $R\in[0,1]$ in the same probability
+space as $(X,A,Y)$.</p>
+<p class="fragment">
+Leads to family of binary classifiers by thresholding $C=\mathbb{I}\{R>t\},
+t\in[0,1]$.
+</p>
+<p class="fragment">
+Different thresholds give different trade-offs between true and false positive
+rate.
+</p>
+</section>
+
+<section>
+<h2>Bayes optimal scores</h2>
+<p class="fragment">
+Goal: Find $R$ that minimizes $\mathbb{E}(Y-R(X,A))^2$
+</p>
+<p class="fragment">
+Solution: $R=r(X, A),$ where $r(x, a)=\mathbb{E}[Y\mid X=x, A=a].$
+</p>
+</section>
+
+<section>
+<p>Given score $R$, plot (TPR, FPR) for all possible thresholds</p>
+<img class="fragment plain" style="width:600px;" src="assets/roc_curve_0.svg" />
+</section>
+
+<section>
+<p>&nbsp;</p>
+<img class="plain" style="width:600px;" src="assets/roc_curve_1.svg" />
+</section>
+
+<section>
+<p>&nbsp;</p>
+<img class="plain" style="width:600px;" src="assets/roc_curve_2.svg" />
+</section>
+
+<section>
+<h2>Deriving classifiers from scores</h2>
+<div class="fragment theorem">
+Definition.&nbsp;&nbsp; 
+A classifier $C$ is <em>derived</em> from a score function $R$ if $C=F(R, A)$
+where $F$ is a possibly randomized function.
+</div>
+<p class="fragment">
+Given score $R$ and cost $c=(c_{fn}, c_{fp}),$ <br />
+derive classifier $C=F(R, A)$ that minimizes cost<br />
+</p>
+<ul style="margin-left:200px;">
+<li class="fragment">subject to no constraints.</li>
+<li class="fragment">subject to equalized odds.</li>
+<li class="fragment">subject to equality of opportunity.</li>
+</section>
+
+<section>
+<h2>Deriving classifiers from scores</h2>
+<p>
+Construction on the board. See <a
+href="https://arxiv.org/abs/1610.02413">paper</a> for details.
+</p>
+</section>
+
+<section>
+<h2>Optimality preservation</h2>
+
+<p class="fragment">
+An optimal equalized odds classifier can be derived<br />
+from the Bayes optimal regressor.
+</p>
+
+<div class="fragment theorem">
+<strong>Theorem.</strong>&nbsp;&nbsp;&nbsp;
+Let $R^*=\mathbb{E}[Y\mid X, A]$ be the <em>Bayes optimal</em> unconstrained
+score and let $c$ be a cost function for true and false positives.<br
+/>
+<span class="fragment">There exists a <strong>derived</strong> equalized odds
+classifier $Y^*=F(R^*, A)$ that has minimal cost among <strong>all</strong>
+equalized odds classifiers.</span>
+</div>
+<p class="fragment">
+Note: Approximate version of the theorem holds as well. See 
+<a href="https://arxiv.org/abs/1610.02413">paper</a>. 
+</p>
+</section>
+
+<section>
+<h2>FICO credit scores</h2>
+<p class="fragment">
+Based on sample of 301536 TransUnion TransRisk scores from 2003<br /> (made
+available by US Federal Reserve)
+</p>
+<div style="text-align:left;margin-left:150px;">
+<p class="fragment">
+$R$ &mdash; Credit score ranging from 300 to 850
+</p>
+<p class="fragment">
+$Y$ &mdash; Default<br /> 
+<span class="fragment" style="margin-left:100px;font-size:24pt">Fineprint: failed to pay debt for at least $90$
+days on at least one account</span>
+</p>
+<p class="fragment">
+$A$ &mdash; Race (Asian, Black, Hispanic, White)
+</p>
+</div>
+</section>
+
+<section>
+<h2>FICO base rates</h2>
+<img style="margin-top:-50px;" class="plain" src="assets/fico-marginals.svg" />
+</section>
+
+<section>
+<h2>FICO score ROC curves by group</h2>
+<img style="margin-top:-50px;" class="plain" src="assets/fico-roc.svg" />
+</section>
+
+<section>
+<h2>FICO score targets</h2>
+<img style="margin-top:-50px;" class="plain" src="assets/fico-targets.svg" />
+</section>
+
+      </div>
+    </div>
+
+    <script src="js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      Reveal.initialize({
+        history: true,
+        transition: 'none',
+        height:900, //"100%",
+        width:1600, //"100%",
+        // Factor of the display size that should remain empty around the content
+        margin: 0.05,
+        // Bounds for smallest/largest possible scale to apply to content
+        minScale: 0.2,
+        maxScale: 1.5,
+        center: false,
+        math: {
+          // mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full'
+        },
+        dependencies: [
+          { src: 'js/classList.js' },
+          { src: 'js/math.js', async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
