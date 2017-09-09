@@ -39,6 +39,7 @@ mindful of its social and legal context.
 * [Day 1](1.html) (8/25/2017) 
 * [Day 2](2.html) (8/28/2017) 
 * [Day 3](3.html) (9/1/2017) 
+* [Day 4](4.html) (9/8/2017) 
 
 # Outline (preliminary)
 
