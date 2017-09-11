@@ -40,6 +40,8 @@ mindful of its social and legal context.
 * [Day 2](2.html) (8/28/2017) 
 * [Day 3](3.html) (9/1/2017) 
 * [Day 4](4.html) (9/8/2017) 
+* Day 5 (9/11/2017) --- Discussing some project ideas
+* Day 6 (9/15/2017) --- Guest lecture by [https://hrdag.org/people/kristian-lum-phd/](Kristian Lum) on COMPAS
 
 # Outline (preliminary)
 
