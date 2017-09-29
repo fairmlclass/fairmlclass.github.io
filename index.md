@@ -37,8 +37,8 @@ mindful of its social and legal context.
 ## Lectures
 
 * [Day 1](1.html) (8/25/2017) --- Overview talk
-* [Day 2](2.html) (8/28/2017)
-* [Day 3](3.html) (9/1/2017) 
+* [Day 2](2.html) (8/28/2017) --- Barocas and Selbst
+* [Day 3](3.html) (9/1/2017) --- Blasts from the past
 * [Day 4](4.html) (9/8/2017) --- Intro to oboservational measures
 * Day 5 (9/11/2017) --- Discussing some project ideas
 * Day 6 (9/15/2017) --- Guest lecture by [Kristian Lum](https://hrdag.org/people/kristian-lum-phd/) on COMPAS
