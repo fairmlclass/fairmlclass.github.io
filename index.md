@@ -42,6 +42,10 @@ mindful of its social and legal context.
 * [Day 4](4.html) (9/8/2017) --- Intro to oboservational measures
 * Day 5 (9/11/2017) --- Discussing some project ideas
 * Day 6 (9/15/2017) --- Guest lecture by [Kristian Lum](https://hrdag.org/people/kristian-lum-phd/) on COMPAS
+* Day 7 (9/18/2017) --- Fairness through Awareness
+* Day 8 (9/22/2017) --- Simpson's paradox
+* Day 9 (9/25/2017) --- First few chapters of Pearl textbook
+* Day 10 (9/29/2017) --- Chapter 4, 5 of Peters textbook
 
 # Outline (preliminary)
 
@@ -147,12 +151,10 @@ Alexandra Chouldechova. 2016.
 An interactive visualization by Martin Wattenberg, Fernanda Viégas, and Moritz
 Hardt. 2016.
 
-[Algorithmic decision making and the cost of
-fairness](https://arxiv.org/abs/1701.08230)  
+[Algorithmic decision making and the cost of fairness](https://arxiv.org/abs/1701.08230)  
 Sam Corbett-Davies, Emma Pierson, Avi Feller, Sharad Goel, Aziz Huq. 2017.
 
-[The problem of Infra-marginality in Outcome Tests for Discrimination]
-(https://5harad.com/papers/threshold-test.pdf)  
+[The problem of Infra-marginality in Outcome Tests for Discrimination](https://5harad.com/papers/threshold-test.pdf)  
 Camelia Simoiu, Sam Corbett-Davies, Sharad Goel. 2017.
 
 ### Inherent limitations of observational measures
@@ -266,6 +268,9 @@ John E. Roemer
 
 [Causality](http://bayes.cs.ucla.edu/BOOK-2K/)  
 Judea Pearl
+
+[Elements of Causal Inference](http://www.math.ku.dk/~peters/elements.html)  
+Peters, Janzing, Sch&ouml;lkopf
 
 [Counterfactuals and Causal
 Inference](http://www.cambridge.org/catalogue/catalogue.asp?isbn=9781107065079)  
