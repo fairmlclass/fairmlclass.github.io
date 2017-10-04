@@ -45,7 +45,10 @@ mindful of its social and legal context.
 * Day 7 (9/18/2017) --- Fairness through Awareness
 * Day 8 (9/22/2017) --- Simpson's paradox
 * Day 9 (9/25/2017) --- First few chapters of Pearl textbook
-* Day 10 (9/29/2017) --- Chapter 4, 5 of Peters textbook
+* Day 10 (9/29/2017) --- Chapter 4, 5 in Peters textbook
+* Day 11 (10/2/2017) --- Chapter 6 in Peters textbook 
+* Day 12 (10/6/2017) --- Chapter 7, 8 in Peters textbook 
+* Day 13 (10/9/2017) --- Causal fairness papers
 
 # Outline (preliminary)
 
