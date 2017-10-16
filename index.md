@@ -49,6 +49,9 @@ mindful of its social and legal context.
 * Day 11 (10/2/2017) --- Chapter 6 in Peters textbook 
 * Day 12 (10/6/2017) --- Chapter 7, 8 in Peters textbook 
 * Day 13 (10/9/2017) --- Causal fairness papers
+* Day 14 (10/13/2017) --- More causal fairness papers
+* Day 15 (10/16/2017) --- Causality recap and outlook
+* Day 16 (10/20/2017) --- Measurement
 
 # Outline (preliminary)
 
@@ -186,6 +189,9 @@ Matt J. Kusner, Joshua R. Loftus, Chris Russell, Ricardo Silva. 2017.
 Reasoning](https://arxiv.org/abs/1706.02744)  
 Niki Kilbertus, Mateo Rojas-Carulla, Giambattista Parascandolo, Moritz Hardt,
 Dominik Janzing, Bernhard Schölkopf. 2017.
+
+[Fair Inference on Outcomes](https://arxiv.org/abs/1705.10378)  
+Razieh Nabi, Ilya Shpitser
 
 ### Similarity modeling, matching 
 
