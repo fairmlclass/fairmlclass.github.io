@@ -52,6 +52,11 @@ mindful of its social and legal context.
 * Day 14 (10/13/2017) --- More causal fairness papers
 * Day 15 (10/16/2017) --- Causality recap and outlook
 * Day 16 (10/20/2017) --- Measurement
+* Day 17 (10/24/2017) --- Hand Chapter 2
+* Day 18 (10/27/2017) --- Hand Chapter 3
+* Day 19 (10/31/2017) --- Hand Chapter 4, failure points of measurement
+* Day 20 (11/3/2017) --- Raw Data is an Oxymoron
+* Day 20 (11/6/2017) --- Discussing project ideas
 
 # Outline (preliminary)
 
