@@ -17,7 +17,7 @@ transcript, and description of any relevant prior projects or research experienc
 Students will receive access to a slack channel for class related discussions.
 
 ## Updates
-
+* **Important**: Projects will be presented on **Tuesday, Dec 12** from 11:30--2:30.
 * *8/15/2017* --- The class has reached its enrollment cap. Additional
  participants are waitlisted for now. If you would like to participate and
  couldn't enroll, please come to the first day of class and talk to me.
@@ -56,7 +56,11 @@ mindful of its social and legal context.
 * Day 18 (10/27/2017) --- Hand Chapter 3
 * Day 19 (10/31/2017) --- Hand Chapter 4, failure points of measurement
 * Day 20 (11/3/2017) --- Raw Data is an Oxymoron
-* Day 20 (11/6/2017) --- Discussing project ideas
+* Day 21 (11/6/2017) --- Discussing project ideas
+* No class on 11/10/2017 due to Veteran's Day.
+* Day 22 (11/13/2017) --- Introduction to sampling
+* Day 23 (11/17/2017) --- Closer look at crime surveys and measurement
+* Day 24 (11/20/2017) --- Critiques of algorithmic decision making
 
 # Outline (preliminary)
 
