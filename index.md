@@ -40,8 +40,8 @@ mindful of its social and legal context.
 * [Day 2](2.html) (8/28) Barocas and Selbst
 * [Day 3](3.html) (9/1) Blasts from the past
 * [Day 4](4.html) (9/8) Intro to oboservational measures
-* Day 5 (9/11) Discussing some project ideas
-* Day 6 (9/15) Guest lecture by [Kristian Lum](https://hrdag.org/people/kristian-lum-phd/) on COMPAS
+* `Day 5 (9/11)` Discussing some project ideas
+* Day 6 (9/15) Guest lecture by [Kristian Lum](https://hrdag.org/people/kristian-lum-phd/) on recidivism prediction
 * Day 7 (9/18) Fairness through Awareness
 * Day 8 (9/22) Simpson's paradox
 * Day 9 (9/25) First few chapters of Pearl textbook
@@ -88,11 +88,9 @@ Last updated: August 17, 2017
 The White House. 2016.
 
 [Bias in computer systems](http://dl.acm.org/citation.cfm?id=230561)  
-Batya Friedman, Helen Nissenbaum. 1996 (!)
+Batya Friedman, Helen Nissenbaum. 1996
 
-
-[The Hidden Biases in Big
-Data](https://hbr.org/2013/04/the-hidden-biases-in-big-data)  
+[The Hidden Biases in Big Data](https://hbr.org/2013/04/the-hidden-biases-in-big-data)  
 Kate Crawford. 2013.
 
 [Big Data’s Disparate Impact](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899)  
@@ -193,9 +191,14 @@ Background reading:
 Pearl (Chapter 1--3)  
 Pearl (Section 4.5.3)
 
+[Elements of Causal Inference](http://www.math.ku.dk/~peters/elements.html)  
+Peters, Janzing, Sch&ouml;lkopf
+
 [On causal interpretation of race in regressions adjusting for confounding and
 mediating variables](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4125322/)  
 Tyler J. VanderWeele and Whitney R. Robinson. 2014.
+
+### Causal fairness criteria
 
 [Counterfactual Fairness](https://arxiv.org/abs/1703.06856)  
 Matt J. Kusner, Joshua R. Loftus, Chris Russell, Ricardo Silva. 2017.
@@ -264,12 +267,10 @@ Jieyu Zhao, Tianlu Wang, Mark Yatskar, Vicente Ordonez, Kai-Wei Chang. 2017.
 <a name="policy"></a>
 ## Legal and policy perspectives
 
-[Big Data’s Disparate
-Impact](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899)  
+[Big Data’s Disparate Impact](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477899)  
 Solon Barocas, Andrew Selbst. 2014.
 
-[It’s Not Privacy, and It’s Not
-Fair](https://www.stanfordlawreview.org/online/privacy-and-big-data-its-not-privacy-and-its-not-fair)  
+[It’s Not Privacy, and It’s Not Fair](https://www.stanfordlawreview.org/online/privacy-and-big-data-its-not-privacy-and-its-not-fair)  
 Cynthia Dwork, Deirdre K. Mulligan. 2013.
 
 [The Trouble with Algorithmic
