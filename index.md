@@ -36,31 +36,37 @@ mindful of its social and legal context.
 
 ## Lectures
 
-* [Day 1](1.html) (8/25/2017) --- Overview talk
-* [Day 2](2.html) (8/28/2017) --- Barocas and Selbst
-* [Day 3](3.html) (9/1/2017) --- Blasts from the past
-* [Day 4](4.html) (9/8/2017) --- Intro to oboservational measures
-* Day 5 (9/11/2017) --- Discussing some project ideas
-* Day 6 (9/15/2017) --- Guest lecture by [Kristian Lum](https://hrdag.org/people/kristian-lum-phd/) on COMPAS
-* Day 7 (9/18/2017) --- Fairness through Awareness
-* Day 8 (9/22/2017) --- Simpson's paradox
-* Day 9 (9/25/2017) --- First few chapters of Pearl textbook
-* Day 10 (9/29/2017) --- Chapter 4, 5 in Peters textbook
-* Day 11 (10/2/2017) --- Chapter 6 in Peters textbook 
-* Day 12 (10/6/2017) --- Chapter 7, 8 in Peters textbook 
-* Day 13 (10/9/2017) --- Causal fairness papers
-* Day 14 (10/13/2017) --- More causal fairness papers
-* Day 15 (10/16/2017) --- Causality recap and outlook
-* Day 16 (10/20/2017) --- Measurement
-* Day 17 (10/24/2017) --- Hand Chapter 2
-* Day 18 (10/27/2017) --- Hand Chapter 3
-* Day 19 (10/31/2017) --- Hand Chapter 4, failure points of measurement
-* Day 20 (11/3/2017) --- Raw Data is an Oxymoron
-* Day 21 (11/6/2017) --- Discussing project ideas
-* No class on 11/10/2017 due to Veteran's Day.
-* Day 22 (11/13/2017) --- Introduction to sampling
-* Day 23 (11/17/2017) --- Closer look at crime surveys and measurement
-* Day 24 (11/20/2017) --- Critiques of algorithmic decision making
+* [Day 1](1.html) (8/25) Overview talk
+* [Day 2](2.html) (8/28) Barocas and Selbst
+* [Day 3](3.html) (9/1) Blasts from the past
+* [Day 4](4.html) (9/8) Intro to oboservational measures
+* Day 5 (9/11) Discussing some project ideas
+* Day 6 (9/15) Guest lecture by [Kristian Lum](https://hrdag.org/people/kristian-lum-phd/) on COMPAS
+* Day 7 (9/18) Fairness through Awareness
+* Day 8 (9/22) Simpson's paradox
+* Day 9 (9/25) First few chapters of Pearl textbook
+* Day 10 (9/29) Chapter 4, 5 in Peters textbook
+* Day 11 (10/2) Chapter 6 in Peters textbook 
+* Day 12 (10/6) Chapter 7, 8 in Peters textbook 
+* Day 13 (10/9) Causal fairness papers
+* Day 14 (10/13) More causal fairness papers
+* Day 15 (10/16) Causality recap and outlook
+* Day 16 (10/20) Measurement
+* Day 17 (10/24) Hand Chapter 2
+* Day 18 (10/27) Hand Chapter 3
+* Day 19 (10/31) Hand Chapter 4, failure points of measurement
+* Day 20 (11/3) Raw Data is an Oxymoron
+* Day 21 (11/6) Discussing project ideas
+* *No class on 11/10 due to Veteran's Day.*
+* Day 22 (11/13) Introduction to sampling
+* Day 23 (11/17) Closer look at crime surveys and measurement
+* Day 24 (11/20) Critiques of algorithmic decision making
+* *No class on 11/24 due to Thanksgiving.*
+* Day 25 (11/27) 
+* Day 26 (11/30)
+* Day 27 (12/4)
+* Day 28 (12/8)
+* Day 29 (12/10) **Project presentations**, special time 11:30--2:30
 
 # Outline (preliminary)
 
