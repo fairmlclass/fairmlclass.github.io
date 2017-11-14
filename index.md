@@ -40,7 +40,7 @@ mindful of its social and legal context.
 * [Day 2](2.html) (8/28) Barocas and Selbst
 * [Day 3](3.html) (9/1) Blasts from the past
 * [Day 4](4.html) (9/8) Intro to oboservational measures
-* `Day 5 (9/11)` Discussing some project ideas
+* Day 5 (9/11) Discussing some project ideas
 * Day 6 (9/15) Guest lecture by [Kristian Lum](https://hrdag.org/people/kristian-lum-phd/) on recidivism prediction
 * Day 7 (9/18) Fairness through Awareness
 * Day 8 (9/22) Simpson's paradox
