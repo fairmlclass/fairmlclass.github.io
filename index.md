@@ -17,8 +17,7 @@ transcript, and description of any relevant prior projects or research experienc
 Students will receive access to a slack channel for class related discussions.
 
 ## Updates
-* See these <a href="http://mrtz.org/nips17">NIPS 2017 tutorial slides</a> for
-a two-hour introduction to the topic.
+* See these <a href="http://mrtz.org/nips17">NIPS 2017 tutorial slides</a> and <a href="https://vimeo.com/248490141">video</a> for a two-hour introduction to the topic.
 * **Important**: Projects will be presented on **Tuesday, Dec 12** from 11:30--2:30.
 * *8/15/2017* --- The class has reached its enrollment cap. Additional
  participants are waitlisted for now. If you would like to participate and
