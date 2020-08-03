@@ -2,6 +2,8 @@
 layout: default
 ---
 
+**Note: For an updated resource, please see [fairmlbook.org](https://fairmlbook.org).**
+
 # CS 294: Fairness in Machine Learning 
 
 UC Berkeley, Fall 2017  
